@@ -1,0 +1,17 @@
+@page
+@model ProjectsModel
+
+<h1>Projects</h1>
+
+<ul>
+@foreach (var project in Model.Projects)
+{
+    <li>@project.Name - @project.Description</li>
+}
+</ul>
+
+<form method="post">
+    <input type="text" name="Name" placeholder="Project Name" required />
+    <input type="text" name="Description" placeholder="Description" />
+    <button type="submit">Add Project</button>
+</form>
